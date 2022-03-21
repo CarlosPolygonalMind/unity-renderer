@@ -17,6 +17,9 @@ namespace DCL
 
         public static long ComputeTextureScore(Texture2D texture)
         {
+            if (texture == null)
+                return 0;
+            
             // https://forum.unity.com/threads/does-unity-always-use-double-memory-for-texture-in-runtime.198270/
             const double ARBITRARY_UNITY_MEMORY_MULTIPLIER = 2;
 
